@@ -10,12 +10,12 @@
   * Return: 0
   */
 
-typedef struct dog /* user defined variable type */
+typedef struct dog /* new variable type dog */
 {
 	char *name;
 	float age;
 	char *owner;
-}dog_t;
+} dog_t;
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
