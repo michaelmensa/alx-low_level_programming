@@ -32,10 +32,15 @@ list_t *add_node(list_t **head, const char *str)
 
 int _strlen(const char *s)
 {
-	int i;
+	const char *str_node;
+	int num = 0;
 
-	while (s[i] != 0)
-		i++;
-	return (i);
+	str_node = s;
+	while (*str_node != '\0')
+	{
+		num++;
+		str_node++;
+	}
+	return (num);
 }
 
