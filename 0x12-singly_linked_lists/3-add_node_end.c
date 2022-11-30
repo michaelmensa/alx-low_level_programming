@@ -54,4 +54,3 @@ int _strlen(const char *s)
 	}
 	return (num);
 }
-}
