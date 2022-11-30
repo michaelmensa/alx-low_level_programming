@@ -17,7 +17,7 @@ typedef struct listint_s
 
 
 /**
-  * prototypes
+  * Prototypes for the tasks
   *
   */
 size_t print_listint(const listint_t *h);
