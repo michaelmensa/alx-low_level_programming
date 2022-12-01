@@ -12,11 +12,11 @@
 
 int _exponent(int x, int y)
 {
-        if (y < 0)
-                return (-1);
-        if (y == 0)
-                return (1);
-        return (x * _exponent(x, y - 1));
+	if (y < 0)
+		return (-1);
+	if (y == 0)
+		return (1);
+	return (x * _exponent(x, y - 1));
 }
 
 /**
