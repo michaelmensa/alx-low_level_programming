@@ -1,24 +1,10 @@
 #include <unistd.h>
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include <sys/stat.h>
 #include <fcntl.h>
 #include "main.h"
-
-/**
-  * _strlen - function that returns the length of a string
-  * @s: pointer to the string
-  * Return: integer
-  */
-int _strlen(char *s)
-{
-	int i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i = i + 1;
-	return (i);
-}
 
 /**
   * append_text_to_file - function that appends text to file
