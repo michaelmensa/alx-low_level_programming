@@ -1,0 +1,35 @@
+# name of executable: school
+# rules: all - builds your executable, clean, oclean, fclean, re
+# variables: CC, SRC, OBJ, NAME
+# CC: the compiler to be used
+# SRC: the .c files
+# OBJ: the .o files
+# NAME: the name of the executable
+# RM: the program to delete files
+# CFLAGS: -Wall -Werror -Wextra -pedantic
+# clean: deletes all Emacs and vim temp files along with executable
+# oclean: deletes object files
+# fclean: deletes all Emacs and vim temp files, executable and object
+# files
+# re: forces recompilation of all source files
+# the all rule should recompile only the updated source files
+
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm -f
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+all: $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+
+clean:
+	$(RM) *~ $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean oclean
+
+re: oclean all
