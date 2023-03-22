@@ -1,0 +1,7 @@
+all: school
+
+display:
+	echo "gcc main.c school.c -o school"
+
+school:
+	gcc main.c school.c -o school
